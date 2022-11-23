@@ -9,4 +9,4 @@
 ### Style
 - npm i styled-components
 ### Icons
-- npm react-icons
+- npm i react-icons
