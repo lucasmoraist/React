@@ -2,15 +2,10 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 export const DivCalc = styled.div`
-    margin: 0;
-    padding: 0;
-
     #fundo{
-        position: absolute;
+        margin-top: 10px;
+        margin-right: 174vh; 
         background-color: #000;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
         border-radius: 30px;
         padding: 15px;
         color: #ffffff;

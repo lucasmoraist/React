@@ -1,4 +1,5 @@
 import React from "react";
+import Rodape from "./components/Rodape";
 import MainRoutes from "./routes/Mainroutes";
 import Menu from "./routes/Menu";
 
@@ -7,7 +8,7 @@ export default function App(){
         <div>
             <Menu/>
             <MainRoutes/>
+            <Rodape/>
         </div>
-        
     )
 }
