@@ -115,6 +115,7 @@ export default function Calculadora(){
         <div id="fundo">
             <p id="resultado">{num}</p>
             <table>
+                <tbody>
                 <tr>
                     <td><button className="other" onClick={clear}>AC</button></td>
                     <td><button className="other" onClick={changeSign}>+/-</button></td>
@@ -148,6 +149,7 @@ export default function Calculadora(){
                     <td><button className="number" onClick={insertNum} value={"."}>,</button></td>
                     <td><button className="operator" onClick={resultado}>=</button></td>
                 </tr>
+                </tbody>
             </table>
         </div>
         </DivCalc>
