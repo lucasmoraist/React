@@ -12,9 +12,14 @@ export const Main = styled.div`
         background-color: rgba(173,216,230,0.5);
         padding: 1px 10px;
         border-radius: 10px;
+        font-size: 17px;
+    }
+    span{
+        color: rgb(0, 42, 255);
     }
 
     #pessoal{
+        font-size: 17px;
         margin-right: 120vh;
         margin-top: 30px;
         background-color: rgba(173,216,230,0.5);
@@ -23,6 +28,7 @@ export const Main = styled.div`
     }
 
     #especifico{
+        font-size: 17px;
         margin-right: 120vh;
         margin-top: 30px;
         background-color: rgba(173,216,230,0.5);
@@ -35,8 +41,9 @@ export default function Home(){
     return(
         <Main>
             <div id="sobre">
+                <h2>Sobre Mim</h2>
                 <p>
-                    <span>Meu nome é Lucas de Morais Nascimento Taguchi, eu sou da área de Análise e Desenvolvimento de Sistemas.</span>
+                    <span>Meu nome é Lucas de Morais Nascimento Taguchi, e estou cursando a área de Análise e Desenvolvimento de Sistemas. </span>
                     Eu me vejo como uma pessoa muito ambiciosa que vai atrás do que quer independente das dificuldades e tempo. Procuro
                     sempre otimizar meu tempo para que assim eu possa ter um tempo só pra mim, ler, treinar, assistir, ouvir música
                     são coisas que gosto de fazer nesses meus momentos, eu acredito que ter esses meus momentos podem me ajudar tanto
