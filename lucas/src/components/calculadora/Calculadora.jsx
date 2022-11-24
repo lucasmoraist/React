@@ -7,7 +7,7 @@ export const DivCalc = styled.div`
 
     #fundo{
         position: absolute;
-        background-color: rgba(0,0,0,0.8);
+        background-color: #000;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
@@ -22,25 +22,43 @@ export const DivCalc = styled.div`
         height: 50px;
         font-size: 25px;
         cursor: pointer;
-        background-color: rgb(31,31,31);
         border: none;
-        color: #ffffff;
         margin: 1px;
+    }
+
+    .operator{
+        background-color: #f69906;
+        color: #fff;
+    }
+    .other{
+        background-color: #a0a0a0;
+    }
+    .number{
+        background-color: #313131;
+        color: #fff;
     }
 
     #zero{
         width: 106px;
+        background-color: #313131;
+        color: #fff;
+    }
+    #zero:hover{
+        background-color: #000;
     }
 
     button:hover{
-        background-color: black;
+        background-color: #000;
+        color: #fff;
     }
 
     #resultado{
         background-color: #ffffff;
-        width: 216px;
-        height: 30px;
+        border-radius: 10px;
+        width: 208px;
+        height: 32px;
         margin: 5px;
+        padding: 2px;
         color: #000;
         text-align: right;
         font-size: 25px;
@@ -103,37 +121,37 @@ export default function Calculadora(){
             <p id="resultado">{num}</p>
             <table>
                 <tr>
-                    <td><button onClick={clear}>AC</button></td>
-                    <td><button onClick={changeSign}>+/-</button></td>
-                    <td><button onClick={porcen}>%</button></td>
-                    <td><button onClick={operatorHandler} value={"/"}>/</button></td>
+                    <td><button className="other" onClick={clear}>AC</button></td>
+                    <td><button className="other" onClick={changeSign}>+/-</button></td>
+                    <td><button className="other" onClick={porcen}>%</button></td>
+                    <td><button className="operator" onClick={operatorHandler} value={"/"}>/</button></td>
                 </tr>
 
                 <tr>
-                    <td><button onClick={insertNum} value={7}>7</button></td>
-                    <td><button onClick={insertNum} value={8}>8</button></td>
-                    <td><button onClick={insertNum} value={9}>9</button></td>
-                    <td><button onClick={operatorHandler} value={"X"}>X</button></td>
+                    <td><button className="number" onClick={insertNum} value={7}>7</button></td>
+                    <td><button className="number" onClick={insertNum} value={8}>8</button></td>
+                    <td><button className="number"onClick={insertNum} value={9}>9</button></td>
+                    <td><button className="operator" onClick={operatorHandler} value={"X"}>X</button></td>
                 </tr>
 
                 <tr>
-                    <td><button onClick={insertNum} value={4}>4</button></td>
-                    <td><button onClick={insertNum} value={5}>5</button></td>
-                    <td><button onClick={insertNum} value={6}>6</button></td>
-                    <td><button onClick={operatorHandler} value={"-"}>-</button></td>
+                    <td><button className="number" onClick={insertNum} value={4}>4</button></td>
+                    <td><button className="number" onClick={insertNum} value={5}>5</button></td>
+                    <td><button className="number" onClick={insertNum} value={6}>6</button></td>
+                    <td><button className="operator" onClick={operatorHandler} value={"-"}>-</button></td>
                 </tr>
                 
                 <tr>
-                    <td><button onClick={insertNum} value={1}>1</button></td>
-                    <td><button onClick={insertNum} value={2}>2</button></td>
-                    <td><button onClick={insertNum} value={3}>3</button></td>
-                    <td><button onClick={operatorHandler} value={"+"}>+</button></td>
+                    <td><button className="number" onClick={insertNum} value={1}>1</button></td>
+                    <td><button className="number" onClick={insertNum} value={2}>2</button></td>
+                    <td><button className="number" onClick={insertNum} value={3}>3</button></td>
+                    <td><button className="operator" onClick={operatorHandler} value={"+"}>+</button></td>
                 </tr>
 
                 <tr>
                     <td colSpan="2"><button id="zero" onClick={insertNum} value={0}>0</button></td>
-                    <td><button onClick={insertNum} value={"."}>,</button></td>
-                    <td><button onClick={resultado}>=</button></td>
+                    <td><button className="number" onClick={insertNum} value={"."}>,</button></td>
+                    <td><button className="operator" onClick={resultado}>=</button></td>
                 </tr>
             </table>
         </div>
