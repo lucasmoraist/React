@@ -11,12 +11,13 @@ export const DivCalc = styled.div`
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        border-radius: 15px;
+        border-radius: 30px;
         padding: 15px;
         color: #ffffff;
     }
 
     button{
+        border-radius: 30px;
         width: 50px;
         height: 50px;
         font-size: 25px;
@@ -49,9 +50,51 @@ export const DivCalc = styled.div`
 export default function Calculadora(){
 
     const [num, setNum] = useState(0);
+    const [oldNum, setOldNum] = useState(0);
+    const [operator, setOperator] = useState();
 
     function insertNum(e){
-        setNum(e.target.value);
+        var input = e.target.value;
+        if(num === 0){
+            setNum(input);
+        }else{
+            setNum(num + input);
+        }
+    }
+
+    function clear(e){
+        setNum(0)
+    }
+
+    function porcen(){
+        setNum(num/100);
+    }
+
+    function changeSign(){
+        if(num>0){
+            setNum(-num)
+        }else{
+            setNum(Math.abs(num));
+        }
+    }
+
+    function resultado(){
+        if(operator === "/"){
+            setNum(parseFloat(oldNum)/parseFloat(num));
+        } else if(operator === "X"){
+            setNum(parseFloat(oldNum)*parseFloat(num));
+        } else if(operator === "+"){
+            setNum(parseFloat(oldNum)+parseFloat(num));
+        } else if(operator === "-"){
+            setNum(parseFloat(oldNum)-parseFloat(num));
+        }
+    }
+
+    function operatorHandler(e){
+        var operadorInput = e.target.value;
+        setOperator(operadorInput);
+        setOldNum(num);
+        setNum(0);
     }
     
     return(
@@ -60,37 +103,37 @@ export default function Calculadora(){
             <p id="resultado">{num}</p>
             <table>
                 <tr>
-                    <td><button>C</button></td>
-                    <td><button>+/-</button></td>
-                    <td><button>%</button></td>
-                    <td><button>/</button></td>
+                    <td><button onClick={clear}>AC</button></td>
+                    <td><button onClick={changeSign}>+/-</button></td>
+                    <td><button onClick={porcen}>%</button></td>
+                    <td><button onClick={operatorHandler} value={"/"}>/</button></td>
                 </tr>
 
                 <tr>
                     <td><button onClick={insertNum} value={7}>7</button></td>
                     <td><button onClick={insertNum} value={8}>8</button></td>
                     <td><button onClick={insertNum} value={9}>9</button></td>
-                    <td><button>X</button></td>
+                    <td><button onClick={operatorHandler} value={"X"}>X</button></td>
                 </tr>
 
                 <tr>
                     <td><button onClick={insertNum} value={4}>4</button></td>
                     <td><button onClick={insertNum} value={5}>5</button></td>
                     <td><button onClick={insertNum} value={6}>6</button></td>
-                    <td><button>-</button></td>
+                    <td><button onClick={operatorHandler} value={"-"}>-</button></td>
                 </tr>
                 
                 <tr>
                     <td><button onClick={insertNum} value={1}>1</button></td>
                     <td><button onClick={insertNum} value={2}>2</button></td>
                     <td><button onClick={insertNum} value={3}>3</button></td>
-                    <td><button>+</button></td>
+                    <td><button onClick={operatorHandler} value={"+"}>+</button></td>
                 </tr>
 
                 <tr>
                     <td colSpan="2"><button id="zero" onClick={insertNum} value={0}>0</button></td>
-                    <td><button>,</button></td>
-                    <td><button>=</button></td>
+                    <td><button onClick={insertNum} value={"."}>,</button></td>
+                    <td><button onClick={resultado}>=</button></td>
                 </tr>
             </table>
         </div>
