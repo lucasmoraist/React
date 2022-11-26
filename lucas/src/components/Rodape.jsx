@@ -17,7 +17,6 @@ export const Footer = styled.div`
         text-decoration-line: underline;
 
         color: #fff;
-        text-decoration: none;
     }
 
     #link{
@@ -35,7 +34,6 @@ export const Footer = styled.div`
         text-decoration-line: underline;
 
         color: #fff;
-        text-decoration: none;
     }
 
     #git{
@@ -53,7 +51,6 @@ export const Footer = styled.div`
         text-decoration-line: underline;
 
         color: #FFFFFF;
-        text-decoration: none;
     }
 `
 
