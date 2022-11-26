@@ -7,33 +7,74 @@ export const Main = styled.div`
     margin-left: 10px;
 
     #sobre{
-        margin-right: 120vh;
-        margin-top: 30px;
-        background-color: rgba(173,216,230,0.5);
-        padding: 1px 10px;
-        border-radius: 10px;
-        font-size: 17px;
+        position: absolute;
+        width: 1196px;
+        height: 285px;
+        left: 526px;
+        top: 20px;
+
+        font-family: 'Kadwa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 40px;
+        text-align: justify;
+
     }
-    span{
-        color: rgb(0, 42, 255);
+
+    #sobre h2{
+        font-family: 'Kadwa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 80px;
+        text-decoration-line: underline;
     }
 
     #pessoal{
-        font-size: 17px;
-        margin-right: 120vh;
-        margin-top: 30px;
-        background-color: rgba(173,216,230,0.5);
-        padding: 1px 10px;
-        border-radius: 10px;
+        position: absolute;
+        width: 465px;
+        height: 208px;
+        left: 526px;
+        top: 460px;
+
+        font-family: 'Kadwa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    #pessoal h2{
+        font-family: 'Kadwa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 80px;
+        text-decoration-line: underline; 
     }
 
     #especifico{
-        font-size: 17px;
-        margin-right: 120vh;
-        margin-top: 30px;
-        background-color: rgba(173,216,230,0.5);
-        padding: 1px 10px;
-        border-radius: 10px;
+        position: absolute;
+        width: 491px;
+        height: 267px;
+        left: 1217px;
+        top: 460px;
+
+        font-family: 'Kadwa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    #especifico h2{
+        font-family: 'Kadwa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 80px;
+        text-decoration-line: underline; 
     }
 `
 
@@ -72,11 +113,6 @@ export default function Home(){
                     <li>SQL</li>
                     <li>React</li>
                     <li>Angular</li>
-                </ul>
-
-                <h2>Idiomas</h2>
-                <ul>
-                    <li>Inglês - Intermediário</li>
                 </ul>
             </div>
         </Main>
