@@ -2,36 +2,67 @@ import React from "react";
 import styled from "styled-components";
 
 export const Footer = styled.div`
-    *{
-        padding-bottom: 10px;
+    #gmail{
+        position: absolute;
+        width: 55px;
+        height: 27.55px;
+        left: 130px;
+        top: 870px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        text-decoration-line: underline;
+
+        color: #fff;
+        text-decoration: none;
     }
 
-    h3{
-        margin-left: 10px;
-    }
-    a{
-        display: inline;
-        margin: 10px;
-        text-decoration: none;
+    #link{
+        position: absolute;
+        width: 73px;
+        height: 27.55px;
+        right: 1608px;
+        top: 870px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        text-decoration-line: underline;
+
         color: #fff;
-        background-color: rgba(0, 42, 255,0.4);
-        margin-left: 10px;
-        border-radius: 30px;
-        padding: 2px;
+        text-decoration: none;
     }
-    a:hover{
-        background-color: #fff;
-        color: rgb(0, 42, 255);
+
+    #git{
+        position: absolute;
+        width: 68px;
+        height: 27.55px;
+        right: 1670px;
+        top: 900px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        text-decoration-line: underline;
+
+        color: #FFFFFF;
+        text-decoration: none;
     }
 `
 
 export default function Rodape(){
     return(
         <Footer>
-            <h3>By: Lucas de Morais Nascimento Taguchi</h3>
-            <a href="https://www.linkedin.com/in/lucas-morais-152672219/">LinkedIn: Lucas Morais</a>
-            <a href="https://github.com/lucasmoraist">GitHub: lucasmoraist</a>
-            <a href="mailto:luksmnt1101@gmail.com">Email: Lucas Morais</a>
+            <a id="gmail" href="mailto:luksmnt1101@gmail.com">Gmail</a>
+            <a id="link" href="https://www.linkedin.com/in/lucas-morais-152672219/">LinkedIn</a>
+            <a id="git" href="https://github.com/lucasmoraist">GitHub</a>
         </Footer>
     )
 }
