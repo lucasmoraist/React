@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import By from "../components/By";
 
 export const Nav = styled.div`
     div{
@@ -57,6 +58,7 @@ export default function Menu(){
     return(
         <Nav>
             <div>
+                <By/>
                 <Link id="home" to="/">Home</Link>
                 <Link id="calculadora" to="/calculadora">Calculadora</Link>
             </div>
